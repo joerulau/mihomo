@@ -1,18 +1,6 @@
 name: Build
 on:
   workflow_dispatch:
-  push:
-    paths-ignore:
-      - "docs/**"
-      - "README.md"
-      - ".github/ISSUE_TEMPLATE/**"
-    branches:
-      - Meta
-    tags:
-      - "v*"
-  pull_request_target:
-    branches:
-      - Meta
       
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
