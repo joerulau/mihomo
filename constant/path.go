@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-const Name = "mihomo"
+const Name = "clash"
 
 var (
 	GeositeName = "GeoSite.dat"
