@@ -19,9 +19,9 @@ LABEL org.opencontainers.image.source="https://github.com/MetaCubeX/mihomo"
 
 RUN apk add --no-cache ca-certificates tzdata iptables
 
-VOLUME ["/root/.config/mihomo/"]
+VOLUME ["/root/.config/clash/"]
 
-COPY --from=builder /mihomo-config/ /root/.config/mihomo/
+COPY --from=builder /mihomo-config/ /root/.config/clash/
 COPY --from=builder /mihomo/mihomo /mihomo
 RUN chmod +x /mihomo
 ENTRYPOINT [ "/mihomo" ]
